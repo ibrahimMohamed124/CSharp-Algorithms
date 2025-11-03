@@ -1,6 +1,6 @@
 ﻿namespace WindowsApp.Algorithms
 {
-    internal class BubbleSort
+    class BubbleSort
     {
         public static void Sort(int[] array)
         {
@@ -24,6 +24,25 @@
                 if (!swapped)
                     break;
             }
+        }
+
+        public static void PrintArray(int[] array)
+        {
+            foreach (int item in array)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
+        }
+
+        public static void TestBubbleSort()
+        {
+            int[] array = { 64, 34, 25, 12, 22, 11, 90 };
+            Console.WriteLine("Original array:");
+            PrintArray(array);
+            Sort(array);
+            Console.WriteLine("Sorted array:");
+            PrintArray(array);
         }
     }
 }
