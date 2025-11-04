@@ -1,7 +1,7 @@
 ﻿
 using WindowsApp.Algorithms.Sorting;
 using WindowsApp.Algorithms.Comparing;
-
+using WindowsApp.Algorithms.Arrays;
 namespace WindowsApp
 {
     class Program
@@ -13,6 +13,7 @@ namespace WindowsApp
             LargestNumberAlgorithm.TestLargestNumber();
             SecondLargestNumberAlgorithms.TestFindSecondLargest();
             SmallestNumberAlgorithm.TestSmallestNumber();
+            FindMissingNumber.TestMissingNumber();
         }
     }
 }
