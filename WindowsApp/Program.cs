@@ -1,4 +1,6 @@
 ﻿
+using WindowsApp.Algorithms.Sorting;
+using WindowsApp.Algorithms.Comparing;
 namespace WindowsApp
 {
     class Program
@@ -6,7 +8,8 @@ namespace WindowsApp
         static void Main(string[] args)
         {
             Console.WriteLine("==================== Welcome to my github repository ====================");
-            Algorithms.BubbleSort.TestBubbleSort();
+            BubbleSort.TestBubbleSort();
+            LargestNumberAlgorithm.TestLargestNumber();
         }
     }
 }

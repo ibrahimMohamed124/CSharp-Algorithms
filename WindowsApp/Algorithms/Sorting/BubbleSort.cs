@@ -1,4 +1,4 @@
-﻿namespace WindowsApp.Algorithms
+﻿namespace WindowsApp.Algorithms.Sorting
 {
     class BubbleSort
     {
