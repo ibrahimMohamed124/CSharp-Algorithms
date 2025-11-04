@@ -14,6 +14,7 @@ namespace WindowsApp
             SecondLargestNumberAlgorithms.TestFindSecondLargest();
             SmallestNumberAlgorithm.TestSmallestNumber();
             FindMissingNumber.TestMissingNumber();
+            SumArrayElements.TestSumOfElementsInArray();
         }
     }
 }
