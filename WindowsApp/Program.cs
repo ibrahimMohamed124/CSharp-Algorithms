@@ -2,6 +2,7 @@
 using WindowsApp.Algorithms.Sorting;
 using WindowsApp.Algorithms.Comparing;
 using WindowsApp.Algorithms.Arrays;
+using WindowsApp.Algorithms.Caeser;
 namespace WindowsApp
 {
     class Program
@@ -15,6 +16,8 @@ namespace WindowsApp
             SmallestNumberAlgorithm.TestSmallestNumber();
             FindMissingNumber.TestMissingNumber();
             SumArrayElements.TestSumOfElementsInArray();
+            CaeserEncryption.TestCaeserENC();
+            CaeserDecryption.TestCaeserDEC();
         }
     }
 }
