@@ -3,6 +3,9 @@ using WindowsApp.Algorithms.Sorting;
 using WindowsApp.Algorithms.Comparing;
 using WindowsApp.Algorithms.Arrays;
 using WindowsApp.Algorithms.Caeser;
+using WindowsApp.Algorithms.Searching;
+using WindowsApp.Algorithms.Check_Palindrome;
+using WindowsApp.Algorithms.Check_Anagram;
 namespace WindowsApp
 {
     class Program
@@ -10,14 +13,17 @@ namespace WindowsApp
         static void Main(string[] args)
         {
             Console.WriteLine("==================== Welcome to my github repository ====================");
-            BubbleSort.TestBubbleSort();
-            LargestNumberAlgorithm.TestLargestNumber();
-            SecondLargestNumberAlgorithms.TestFindSecondLargest();
-            SmallestNumberAlgorithm.TestSmallestNumber();
-            FindMissingNumber.TestMissingNumber();
-            SumArrayElements.TestSumOfElementsInArray();
-            CaeserEncryption.TestCaeserENC();
-            CaeserDecryption.TestCaeserDEC();
+            BubbleSort.TestBubbleSort();  // Added test call for BubbleSort
+            LargestNumberAlgorithm.TestLargestNumber();  // Added test call for LargestNumberAlgorithm
+            SecondLargestNumberAlgorithms.TestFindSecondLargest();  // Added test call for SecondLargestNumberAlgorithms
+            SmallestNumberAlgorithm.TestSmallestNumber();  // Added test call for SmallestNumberAlgorithm
+            FindMissingNumber.TestMissingNumber();  // Added test call for FindMissingNumber
+            SumArrayElements.TestSumOfElementsInArray();  // Added test call for SumArrayElements
+            CaeserEncryption.TestCaeserENC();  // Added test call for CaeserEncryption
+            CaeserDecryption.TestCaeserDEC(); // Added test call for CaeserDecryption
+            BinarySearch.TestBinarySearch(); // Added test call for BinarySearch
+            CheckPalindrome.TestCheckPalindrome(); // Added test call for CheckPalindrome
+            isAnagram.TestIsAnagram();
         }
     }
 }
