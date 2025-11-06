@@ -2,10 +2,12 @@
 using WindowsApp.Algorithms.Sorting;
 using WindowsApp.Algorithms.Comparing;
 using WindowsApp.Algorithms.Arrays;
-using WindowsApp.Algorithms.Caeser;
 using WindowsApp.Algorithms.Searching;
 using WindowsApp.Algorithms.Check_Palindrome;
 using WindowsApp.Algorithms.Check_Anagram;
+using WindowsApp.Algorithms.Cryptography.Caeser;
+using WindowsApp.Algorithms.Cryptography.Vigenere;
+
 namespace WindowsApp
 {
     class Program
@@ -25,6 +27,7 @@ namespace WindowsApp
             CheckPalindrome.TestCheckPalindrome(); // Added test call for CheckPalindrome
             isAnagram.TestIsAnagram();  // Added test call for CheckAnagram
             BruteForce.TestBruteForce(); // Added test call for BruteForce
+            VigENC.TestVigENC(); // Added test call for Vigenere Encryption
         }
     }
 }

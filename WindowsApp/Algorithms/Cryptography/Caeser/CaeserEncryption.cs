@@ -1,5 +1,4 @@
-﻿
-namespace WindowsApp.Algorithms.Caeser
+﻿namespace WindowsApp.Algorithms.Cryptography.Caeser
 {
     class CaeserEncryption
     {

@@ -1,6 +1,6 @@
-﻿using static WindowsApp.Algorithms.Caeser.CaeserEncryption;
+﻿using static WindowsApp.Algorithms.Cryptography.Caeser.CaeserEncryption;
 
-namespace WindowsApp.Algorithms.Caeser
+namespace WindowsApp.Algorithms.Cryptography.Caeser
 {
     class CaeserDecryption
     {
