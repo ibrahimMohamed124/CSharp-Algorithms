@@ -23,7 +23,8 @@ namespace WindowsApp
             CaeserDecryption.TestCaeserDEC(); // Added test call for CaeserDecryption
             BinarySearch.TestBinarySearch(); // Added test call for BinarySearch
             CheckPalindrome.TestCheckPalindrome(); // Added test call for CheckPalindrome
-            isAnagram.TestIsAnagram();
+            isAnagram.TestIsAnagram();  // Added test call for CheckAnagram
+            BruteForce.TestBruteForce(); // Added test call for BruteForce
         }
     }
 }

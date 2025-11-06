@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace WindowsApp.Algorithms.Check_Anagram
 {
     class isAnagram
@@ -16,7 +11,7 @@ namespace WindowsApp.Algorithms.Check_Anagram
             List<char> list_b = str2.ToList();
             list_a.Sort();
             list_b.Sort();
-            if(list_a.SequenceEqual(list_b))
+            if(list_a.SequenceEqual(list_b)) // Compares Two Lists
             {
                 return true;
             }
@@ -30,6 +25,7 @@ namespace WindowsApp.Algorithms.Check_Anagram
             bool res = IsAnagram(a, b);
             if(res == true) Console.WriteLine("These Strings are Anagram");
             else Console.WriteLine("These Strings are not Anagram");
+            // Output: These Strings are Anagram
         }
     }
 }
