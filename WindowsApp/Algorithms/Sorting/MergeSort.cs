@@ -2,68 +2,58 @@
 
 namespace WindowsApp.Algorithms.Sorting
 {
-    public class MergeSort
+    public class MergeSortAlgorithm
     {
-        public static void Sort(int[] arr, int left, int right)
+        static double[] MergeSort(double[] arr)
         {
-            if (left < right)
-            {
-                int mid = (left + right) / 2;
+            if (arr.Length <= 1)
+                return arr;
 
-                // Divide the array into two halves
-                Sort(arr, left, mid);
-                Sort(arr, mid + 1, right);
+            int mid = arr.Length / 2;
+            double[] leftHalf = new double[mid];
+            double[] rightHalf = new double[arr.Length - mid];
 
-                // Merge the sorted halves
-                Merge(arr, left, mid, right);
-            }
+            Array.Copy(arr, 0, leftHalf, 0, mid);
+            Array.Copy(arr, mid, rightHalf, 0, arr.Length - mid);
+
+            double[] sortedLeft = MergeSort(leftHalf);
+            double[] sortedRight = MergeSort(rightHalf);
+
+            return Merge(sortedLeft, sortedRight);
         }
 
-        private static void Merge(int[] arr, int left, int mid, int right)
+        static double[] Merge(double[] left, double[] right)
         {
-            int n1 = mid - left + 1;
-            int n2 = right - mid;
+            List<double> result = new List<double>();
+            int i = 0, j = 0;
 
-            int[] leftArray = new int[n1];
-            int[] rightArray = new int[n2];
-
-            for (int i = 0; i < n1; i++)
-                leftArray[i] = arr[left + i];
-
-            for (int j = 0; j < n2; j++)
-                rightArray[j] = arr[mid + 1 + j];
-
-            int iLeft = 0, iRight = 0, k = left;
-
-            // Merge the two subarrays back into the main array
-            while (iLeft < n1 && iRight < n2)
+            while (i < left.Length && j < right.Length)
             {
-                if (leftArray[iLeft] <= rightArray[iRight])
-                    arr[k++] = leftArray[iLeft++];
+                if (left[i] < right[j])
+                {
+                    result.Add(left[i]);
+                    i++;
+                }
                 else
-                    arr[k++] = rightArray[iRight++];
+                {
+                    result.Add(right[j]);
+                    j++;
+                }
             }
 
-            // Copy any remaining elements
-            while (iLeft < n1)
-                arr[k++] = leftArray[iLeft++];
+            while (i < left.Length)
+            {
+                result.Add(left[i]);
+                i++;
+            }
 
-            while (iRight < n2)
-                arr[k++] = rightArray[iRight++];
-        }
+            while (j < right.Length)
+            {
+                result.Add(right[j]);
+                j++;
+            }
 
-        // Test the algorithm
-        public static void Main()
-        {
-            int[] arr = { 12, 11, 13, 5, 6, 7 };
-
-            Console.WriteLine("Array before sorting:");
-            Console.WriteLine(string.Join(", ", arr));
-
-            Sort(arr, 0, arr.Length - 1);
-
-            Console.WriteLine("Array after sorting:");
-            Console.WriteLine(string.Join(", ", arr));
+            return result.ToArray();
         }
     }
 }

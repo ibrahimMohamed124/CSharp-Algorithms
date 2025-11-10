@@ -4,8 +4,8 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace WindowsApp.Algorithms.Delegates
+         
+namespace WindowsApp.Algorithms.Delegates  
 {
     public class ExtractEvens
     {
