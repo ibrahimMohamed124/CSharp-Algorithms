@@ -15,7 +15,7 @@ namespace WindowsApp
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("==================== Welcome to my github repository ====================");
+            Console.WriteLine("==================== Welcome to my github repository ====================");
             //BubbleSort.TestBubbleSort();  // Added test call for BubbleSort
             //LargestNumberAlgorithm.TestLargestNumber();  // Added test call for LargestNumberAlgorithm
             //SecondLargestNumberAlgorithms.TestFindSecondLargest();  // Added test call for SecondLargestNumberAlgorithms
@@ -32,7 +32,8 @@ namespace WindowsApp
             ////VigDEC.TestVigDEC(); // Added test call for Vigenere Decryption // Currently Commented Out
             //ExtractEvens.TestGetEvenNumbers(); // Added test call for ExtractEvens
             //ExtractEvens.TestIsEven(); // Added test call for IsEven
-            DateReformatting.TestReformatDate();
+            //DateReformatting.TestReformatDate();
+            CheckArrayOrder.TestCheckArrayOrder();
         }
     }
 }
