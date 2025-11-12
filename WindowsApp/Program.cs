@@ -8,7 +8,7 @@ using WindowsApp.Algorithms.Cryptography.Caeser;
 using WindowsApp.Algorithms.Cryptography.Vigenere;
 using WindowsApp.Algorithms.Delegates;
 using WindowsApp.Algorithms.Reformatting;
-
+using WindowsApp.Algorithms.Scrumblies;
 namespace WindowsApp
 {
     class Program
@@ -33,7 +33,8 @@ namespace WindowsApp
             //ExtractEvens.TestGetEvenNumbers(); // Added test call for ExtractEvens
             //ExtractEvens.TestIsEven(); // Added test call for IsEven
             //DateReformatting.TestReformatDate();
-            CheckArrayOrder.TestCheckArrayOrder();
+            //CheckArrayOrder.TestCheckArrayOrder();
+            Scrumblies.TestScrumble();
         }
     }
 }
