@@ -34,7 +34,8 @@ namespace WindowsApp
             //ExtractEvens.TestIsEven(); // Added test call for IsEven
             //DateReformatting.TestReformatDate();
             //CheckArrayOrder.TestCheckArrayOrder();
-            Scrumblies.TestScrumble();
+            //Scrumblies.TestScrumble();
+            LinearSearching.TestLinearSearch();
         }
     }
 }

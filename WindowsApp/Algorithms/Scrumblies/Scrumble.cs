@@ -9,26 +9,35 @@ namespace WindowsApp.Algorithms.Scrumblies
 {
     public class Scrumblies
     {
-        public static bool Scrumble(string str1, string str2)
+        public static bool Scramble(string source, string target)
         {
-            List<char> str1CharsList = str1.ToList();
-            List<char> str2CharsList = str2.ToList();
-            if(str1CharsList.Count > str2CharsList.Count)
+            // Convert source string to a dictionary of character counts
+            Dictionary<char, int> charCounts = new Dictionary<char, int>();
+
+            foreach (char c in source)
             {
-                bool isSubset = str2CharsList.All(c => str1CharsList.Contains(c));
-                return isSubset;
+                if (charCounts.ContainsKey(c))
+                    charCounts[c]++;
+                else
+                    charCounts[c] = 1;
             }
-            else
+
+            // Check that every character in target exists in source with enough count
+            foreach (char c in target)
             {
-                bool isSubset = str1CharsList.All(c => str2CharsList.Contains(c));
-                return isSubset;
+                if (!charCounts.ContainsKey(c) || charCounts[c] == 0)
+                    return false;
+
+                charCounts[c]--;
             }
+
+            return true;
         }
 
         public static void TestScrumble()
         {
-            Console.WriteLine(Scrumble("rkqodlw", "world"));
-            Console.WriteLine(Scrumble("rkqodw", "world"));
+            Console.WriteLine(Scramble("rkqodlw", "world")); // True
+            Console.WriteLine(Scramble("rkqodw", "world")); // False
         }
     }
 }
