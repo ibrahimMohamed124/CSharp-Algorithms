@@ -10,6 +10,8 @@ namespace WindowsApp.Algorithms.Arrays
     {
         public static int MissingNumber(int[] arr)
         {
+            if (arr.Equals(null)) throw new ArgumentException("Array Cannot be null");
+
             int count = 1;
             int Missing = 0;
             for (int i = 0; i < arr.Length - 1; i++)

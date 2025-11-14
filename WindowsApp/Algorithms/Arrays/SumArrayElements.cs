@@ -5,6 +5,8 @@ namespace WindowsApp.Algorithms.Arrays
     {
         public static int SumOfElementsInArray(int[] arr)
         {
+            if (arr.Equals(null)) throw new ArgumentException("Array Cannot be null");
+
             int sum = 0;
             for (int i = 0; i < arr.Length; i++)
             {

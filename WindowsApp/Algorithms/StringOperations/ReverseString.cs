@@ -7,6 +7,9 @@ namespace WindowsApp.Algorithms.StringOperations
     {
         public static StringBuilder Reverse(string str)
         {
+            if (str == null)
+                throw new ArgumentException("No String Value Added");
+
             StringBuilder reversed = new StringBuilder();
             for (int i = str.Length - 1; i >= 0; i--)
             {
@@ -18,8 +21,8 @@ namespace WindowsApp.Algorithms.StringOperations
         public static void TestReverseString()
         {
             string str = "abc";
-            Console.WriteLine(str);
-            Console.WriteLine(Reverse(str));
+            Console.WriteLine("Original: " + str);
+            Console.WriteLine("Reversed: " + Reverse(str));
         }
     }
 }

@@ -10,6 +10,8 @@ namespace WindowsApp.Algorithms.Check_Palindrome
     {
         public static bool isPalindrome(string str)
         {
+            if (str.Equals(null)) throw new ArgumentException("String Cannot be null");
+
             int left = 0;
             int right = str.Length - 1;
             while (left < right)

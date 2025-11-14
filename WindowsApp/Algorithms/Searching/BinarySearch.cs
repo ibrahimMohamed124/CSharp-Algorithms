@@ -5,6 +5,7 @@ namespace WindowsApp.Algorithms.Searching
     {
         public static int Search(int[] arr, int target)
         {
+            if (arr.Length <=1 || target == null) return -1;
             int left = 0;
             int right = arr.Length - 1;
             while (left <= right)

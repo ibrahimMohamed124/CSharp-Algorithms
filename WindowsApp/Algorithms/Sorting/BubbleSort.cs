@@ -4,6 +4,7 @@
     {
         public static void Sort(int[] array)
         {
+            if (array == null) throw new ArgumentException("No Array input to sort");
             int length = array.Length;
             bool swapped;
             for (int i = 0; i < length - 1; i++)

@@ -5,6 +5,8 @@ namespace WindowsApp.Algorithms.Check_Anagram
     {
         public static bool IsAnagram(string str1, string str2) 
         {
+            if (str1.Equals(null)) throw new ArgumentException("String Cannot be null");
+
             string a = str1.ToLower();
             string b = str2.ToLower();
             List<char> list_a = str1.ToList();

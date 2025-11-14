@@ -11,7 +11,9 @@ namespace WindowsApp.Algorithms.Arrays
     {
         public static string CheckOrder(int[] arr)
         {
-            for(int i = 0; i < arr.Length - 1; i++)
+            if (arr.Length == null) throw new ArgumentException("Array Cannot be null");
+
+            for (int i = 0; i < arr.Length - 1; i++)
             {
                 if (arr[i] == arr[i + 1]) continue;
                 if (arr[i] > arr[i + 1]) return "Descending";

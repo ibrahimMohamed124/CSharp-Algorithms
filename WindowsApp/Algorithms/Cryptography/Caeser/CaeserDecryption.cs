@@ -4,7 +4,12 @@ namespace WindowsApp.Algorithms.Cryptography.Caeser
 {
     class CaeserDecryption
     {
-        public static string CaeserDEC(string str, int key) => CaeserENC(str, -key);
+        public static string CaeserDEC(string str, int key)
+        {
+            if (key <= 0) return "Key cannot be less than1";
+            if (str.Equals(null)) return "Text Cannot be null";
+            return CaeserENC(str, -key);
+        }
 
         public static void TestCaeserDEC()
         {
