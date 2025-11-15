@@ -11,6 +11,8 @@ using WindowsApp.Algorithms.Reformatting;
 using WindowsApp.Algorithms.Scrumblies;
 using WindowsApp.Algorithms.StringOperations;
 using WindowsApp.Algorithms.GroupByCommas;
+using WindowsApp.Algorithms.LikesSystem;
+using WindowsApp.Algorithms.MorseCode;
 
 namespace WindowsApp
 {
@@ -41,7 +43,9 @@ namespace WindowsApp
             //LinearSearching.TestLinearSearch(); // Added test call for linear search
             //ReverseString.TestReverseString(); // Added test for reverse string
             //RemoveDuplicateWords.TestRemoveDuplicates(); // Added test call for RemoveDuplicateWords
-            GroupByCommas.TestGroupNumbers(); // Added test call for GroupByCommas
+            // GroupByCommas.TestGroupNumbers(); // Added test call for GroupByCommas
+            // LikesSystem.TestWhoLikesIt(); // Added test call for LikesSystem
+            Console.WriteLine(MorseCodeDecoder.Decode(".- -... -.."));
         }
     }
 }
