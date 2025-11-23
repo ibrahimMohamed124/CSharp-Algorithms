@@ -41,15 +41,18 @@ namespace WindowsApp.Algorithms.MorseCode
             foreach (char c in text.ToUpper())
             {
                 if (c == ' ')
-                {
+                {  
                     encoded.Append("   "); // 3 spaces between words
                 }
                 else
                 {
-                    var morseCode = MorseCodeDict.FirstOrDefault(x => x.Value == c.ToString()).Key;
-                    if (morseCode != null)
+                    foreach (var pair in MorseCodeDict)
                     {
-                        encoded.Append(morseCode + " "); // 1 space between letters
+                        if (pair.Value == c.ToString())
+                        {
+                            encoded.Append(pair.Key + " "); // 1 space between letters
+                            break;
+                        }
                     }
                 }
             }
